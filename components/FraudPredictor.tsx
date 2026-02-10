@@ -442,7 +442,7 @@ const App: React.FC = () => {
                   value={chatInput}
                   onChange={(e) => setChatInput(e.target.value)}
                   placeholder="Ask forensics something..."
-                  className="w-full glass-input rounded-2xl py-3 pl-4 pr-12 text-sm text-white focus:outline-none focus:ring-2 focus:ring-purple-500/50"
+                  className="w-full glass-input rounded-2xl py-3 pl-4 pr-12 text-sm text-black focus:outline-none focus:ring-2 focus:ring-purple-500/50"
                 />
                 <button 
                   type="submit"
