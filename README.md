@@ -27,5 +27,5 @@
 ## 📦 Installation & Setup
 1. **Clone the repo:**
    ```bash
-   git clone [https://github.com/NishantTyagi-git/ClaimGuard.git](https://github.com/NishantTyagi-git/ClaimGuard.git)
+   git clone https://github.com/NishantTyagi-git/ClaimGuard.git
    cd fraudguard-ai
