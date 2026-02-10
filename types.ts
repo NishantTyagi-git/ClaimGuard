@@ -1,22 +1,29 @@
-export enum IncidentSeverity {
-  TRIVIAL = 'Trivial Damage',
-  MINOR = 'Minor Damage',
-  MAJOR = 'Major Damage',
-  TOTAL = 'Total Loss'
+export interface TreeNode {
+  featureIndex?: number;
+  threshold?: number;
+  left?: TreeNode;
+  right?: TreeNode;
+  value?: number; // Result probability (0.0 to 1.0)
+  groups?: number[][][];
 }
 
-export interface ClaimData {
+export interface ClaimInputs {
   months_as_customer: number;
-  policy_annual_premium: number;
   policy_deductable: number;
   umbrella_limit: number;
-  vehicle_claim: number;
+  policy_annual_premium: number;
   incident_hour_of_the_day: number;
-  incident_severity: IncidentSeverity;
+  vehicle_claim: number;
+  incident_severity: string;
 }
 
 export interface PredictionResult {
   isFraud: boolean;
-  riskScore: number; // 0-100
-  aiAnalysis: string;
+  prob: number;
+  aiAnalysis?: string;
+}
+
+export interface Message {
+  role: 'user' | 'model';
+  text: string;
 }
